@@ -9,7 +9,7 @@ This makes objects useful for grouping related information and behavior together
 
 ---
 
-## Example: Car Object
+### Example: **Car Object**
 
 ```js
 let car = {
@@ -26,7 +26,7 @@ console.log(car["color"]); // "Red"
 car.start();               // "Car started!"
 ```
 
-## Key Points
+### Key Points
 
 * Objects are created using curly braces {}.
 
@@ -44,7 +44,7 @@ car.start();               // "Car started!"
 
 <br><br>
 
-## Why Do We Use Bracket Notation `[]` in JavaScript?
+### Why Do We Use Bracket Notation `[]` in JavaScript?
 
 We use **bracket notation** when the property name is **not fixed** or is **defined outside the object** (for example, stored in a variable).
 
@@ -70,7 +70,7 @@ console.log(car["speed"]); // undefined (not defined in object)
 ```
 
 
-## Rule of thumb:
+### Rule of thumb:
 
 * Use dot notation when the property name is known.
 
@@ -82,16 +82,16 @@ console.log(car["speed"]); // undefined (not defined in object)
 
 # Nesting and Deep Access in JavaScript Objects
 
-## Nesting
+### Nesting
 **Nesting** is when an object contains another object inside it.  
 This allows us to represent more complex data structures.
 
-## Deep Access
+### Deep Access
 **Deep access** means accessing the properties of a nested object.
 
 ---
 
-## Example
+### Example
 
 ```js
 let student = {
@@ -116,14 +116,14 @@ console.log(student["address"]["country"]); // "Nepal"
 ```
 <br>
 
-## What is Destructuring?
+# What is Destructuring?
 **Destructuring** is a process that allows you to **extract values from objects (or arrays) and assign them to variables directly**, even if those values are nested deep inside the object.  
 
 This means you don’t have to repeatedly use **deep access** (`obj.prop1.prop2...`) to get the values.
 
 ---
 
-## Example
+### Example
 
 ```js
 let humans = {
@@ -168,9 +168,35 @@ console.log(carBrand); // "Toyota"
 console.log(rest);     // { color: "Red", speed: 120 }
 ```
 
-## Key Points
+### Key Points
 
 * Destructuring extracts nested values into variables directly.
 * You don’t need to follow the full deep access path every time.
 * Makes the code shorter, cleaner, and easier to read.
 * Works with nested objects and arrays.
+
+
+## Looping in Objects
+
+We can loop through objects in JavaScript using different methods:
+
+- **for...in**
+- **Object.keys()**
+- **Object.entries()**
+
+---
+
+### 1. for...in
+The `for...in` loop iterates over the **keys (properties)** of an object.
+
+```javascript
+let obj = {
+  name: "Sharwan",
+  age: 11,
+  location: "Nepal"
+};
+
+// Print all properties
+for (let key in obj) {
+  console.log(key, ":", obj[key]);
+}
